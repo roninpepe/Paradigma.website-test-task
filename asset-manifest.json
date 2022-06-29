@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b81de21c.css",
+    "main.js": "/static/js/main.1b6f2f4b.js",
+    "static/media/bg.jpg": "/static/media/bg.7a7a23a5746ef5bdb88c.jpg",
+    "static/media/bg-m.png": "/static/media/bg-m.89eea809f03637bbd07a.png",
+    "static/media/bg-form.jpg": "/static/media/bg-form.8203d2d69d81bec51654.jpg",
+    "static/media/click.svg": "/static/media/click.3d8aa8f326ad2685f911e900ace6280c.svg",
+    "static/media/whatsapp.svg": "/static/media/whatsapp.692cb6acf21abbcd188d4f0fee8688f9.svg",
+    "static/media/cross.svg": "/static/media/cross.a3b9a0c6eda426a4d6ba749aeaf2dde0.svg",
+    "static/media/viber.svg": "/static/media/viber.81e107c204aeafe5761053098484d0c4.svg",
+    "static/media/logo.svg": "/static/media/logo.a65a8c19dd93254770b6b74eb6c1a2c1.svg",
+    "static/media/logo-m.svg": "/static/media/logo-m.e278f29dfa28c7b77638de10ac95b06d.svg",
+    "static/media/burger.svg": "/static/media/burger.c3c9bbbac216f9ed66fc5bd1b9a45bff.svg",
+    "index.html": "/index.html",
+    "static/media/home.svg": "/static/media/home.57102ce06f4eba936976bcb54a87cda7.svg",
+    "static/media/telegram.svg": "/static/media/telegram.43e68d5683d5aa87979cb1511bd0d093.svg",
+    "static/media/arrow.svg": "/static/media/arrow.e4457fc925d03ce2165f143cba1282de.svg",
+    "main.b81de21c.css.map": "/static/css/main.b81de21c.css.map",
+    "main.1b6f2f4b.js.map": "/static/js/main.1b6f2f4b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b81de21c.css",
+    "static/js/main.1b6f2f4b.js"
+  ]
+}
