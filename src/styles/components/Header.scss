@@ -1,0 +1,400 @@
+@import 'styles/variables';
+
+.navigation {
+  display: flex;
+  font-weight: $medium;
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    color: $c-primary;
+    font-weight: $medium;
+    text-transform: uppercase;
+    transition-property: color, border-color;
+
+    &:hover {
+      color: $c-accents-1;
+    }
+  }
+  &__home {
+    flex-grow: 0;
+  }
+}
+
+.about {
+  text-align: center;
+}
+
+.price-list {
+  display: flex;
+  align-items: center;
+  font-weight: $semi-bold;
+
+  &:hover * {
+    color: $c-accents-2-h;
+
+    .price-list__download {
+      border-color: $c-accents-2-h;
+    }
+  }
+
+  &__ {
+    &pdf-circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $c-accents-2;
+      background: $bg-primary;
+    }
+
+    &download {
+      color: $c-primary;
+      border-bottom: dotted $c-accents-2 0;
+    }
+  }
+
+  * {
+    transition-property: color, border-color;
+  }
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__ {
+    &indicator {
+      display: inline-block;
+      background-color: $bg-accents-2;
+      vertical-align: middle;
+    }
+
+    &links {
+      display: flex;
+    }
+
+    &link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition-property: box-shadow;
+
+      &:hover {
+        box-shadow: inset 0px 0px 100vw 0px rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    &viber {
+      background-color: $bg-viber;
+    }
+    &whatsapp {
+      background-color: $bg-whatsapp;
+    }
+    &telegram {
+      background-color: $bg-telegram;
+    }
+  }
+}
+
+.call-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__ {
+    &indicator {
+      display: inline-block;
+      background-color: $bg-accents-2;
+      vertical-align: middle;
+    }
+
+    &phone {
+      font-weight: $semi-bold;
+    }
+
+    &link {
+      color: $c-accents-2;
+      border: $c-accents-2 dotted 0;
+      transition-property: color, border-color;
+
+      &:hover {
+        color: $c-accents-2-h;
+        border-color: $c-accents-2-h;
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  gap: 16px;
+  text-align: center;
+  overflow: auto;
+
+  .navigation {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 0 0 16px;
+  }
+
+  .about {
+    font-size: 8px;
+    width: 206px;
+  }
+
+  .price-list {
+    gap: 17.15px;
+    font-size: 10px;
+
+    &__ {
+      &pdf-circle {
+        font-size: 11px;
+        @include circle(43.85px);
+        filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.05));
+      }
+
+      &download {
+        border-bottom-width: 2px;
+      }
+    }
+  }
+
+  .social {
+    justify-content: flex-end;
+    flex-grow: 1;
+    gap: 10.58px;
+    font-size: 8px;
+    padding: 0 0 39.58px;
+
+    &__ {
+      &indicator {
+        @include circle(4px);
+      }
+
+      &links {
+        gap: 14.15px;
+      }
+
+      &link {
+        @include circle(43.85px);
+      }
+    }
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+
+  &__ {
+    &info {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &burger {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 64px;
+      height: 73px;
+      align-self: flex-start;
+    }
+
+    &wrapper {
+      display: flex;
+      flex-direction: column;
+
+      &_ {
+        &desktop {
+          @include l {
+            display: none;
+          }
+
+          .navigation {
+            padding: 0 r(175);
+
+            &__link {
+              height: r(102);
+              border-bottom: r(1) solid;
+              border-color: rgba(28, 28, 28, 0.07);
+
+              &:hover {
+                border-color: rgba(243, 129, 32, 0.07);
+              }
+            }
+          }
+
+          .header__info {
+            align-items: center;
+            padding: 0 r(175);
+          }
+
+          .about {
+            display: flex;
+            flex-direction: column;
+            font-size: r(12);
+            width: r(205);
+            gap: r(6);
+          }
+
+          .price-list {
+            gap: r(17.15);
+            font-size: r(12);
+
+            &__ {
+              &pdf-circle {
+                font-size: r(11);
+                @include circle(r(43.85));
+                filter: drop-shadow(0px 0px r(25) rgba(0, 0, 0, 0.05));
+              }
+
+              &download {
+                border-bottom-width: r(2);
+              }
+            }
+          }
+
+          .social {
+            gap: r(16.58);
+            font-size: r(12);
+
+            &__ {
+              &indicator {
+                @include circle(r(4));
+              }
+
+              &links {
+                gap: r(14.15);
+              }
+
+              &link {
+                @include circle(r(43.85));
+              }
+            }
+          }
+
+          .call-me {
+            gap: r(6);
+
+            &__ {
+              &text {
+                font-size: r(12);
+              }
+
+              &indicator {
+                @include circle(r(4));
+              }
+
+              &phone {
+                font-size: r(22);
+              }
+
+              &link {
+                border-bottom-width: r(2);
+              }
+            }
+          }
+
+          .i- {
+            &logo {
+              height: r(148);
+              filter: drop-shadow(0px r(25) r(50) rgba(0, 0, 0, 0.03));
+            }
+            &home {
+              height: r(22);
+            }
+            &viber {
+              height: r(19.29);
+            }
+            &whatsapp {
+              height: r(19.93);
+            }
+            &telegram {
+              height: r(14.03);
+            }
+          }
+        }
+
+        &mobile {
+          display: none;
+          background: $bg-main-picture;
+          box-shadow: 0 0 5px 5px $bg-main-picture;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 1;
+
+          @include l {
+            display: flex;
+          }
+
+          .header__info {
+            align-items: flex-start;
+          }
+
+          .call-me {
+            gap: 4px;
+            padding: 10px 0 0;
+
+            &__ {
+              &text {
+                font-size: 7px;
+              }
+
+              &indicator {
+                @include circle(5px);
+              }
+
+              &phone {
+                font-size: 14px;
+              }
+
+              &link {
+                border-bottom-width: 2px;
+              }
+            }
+          }
+
+          .i- {
+            &logo-m {
+              height: 52px;
+              margin: 0 22px;
+              filter: drop-shadow(0px r(25) r(50) rgba(0, 0, 0, 0.03));
+            }
+            &burger {
+              height: 15px;
+            }
+            &cross {
+              height: 17.01px;
+            }
+            &home {
+              height: 22px;
+            }
+            &viber {
+              height: 19.29px;
+            }
+            &whatsapp {
+              height: 19.93px;
+            }
+            &telegram {
+              height: 14.03px;
+            }
+          }
+        }
+
+        &fullscreen {
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
